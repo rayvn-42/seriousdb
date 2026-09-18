@@ -1,0 +1,45 @@
+name: Update Version Badge
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - VERSION
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-badge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Read version
+        id: version
+        uses: echo "version=$(cat VERSION)" >> "$GITHUB_OUTPUT"
+        
+      - name: Generate badge
+        run: |
+          mkdir -p badge
+
+          cat > badge/version.json <<EOF
+          {
+            "schemaVersion": 1,
+            "label": "version",
+            "message": "${{ steps.version.outputs.version }}",
+            "color": "blue"
+          }
+          EOF
+
+      - name: Publish badge
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: badges
+          publish_dir: ./badge
+        

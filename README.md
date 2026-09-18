@@ -5,7 +5,7 @@
 <div align="center">
 
 [![CI](https://github.com/danieldeer/seriousdb/actions/workflows/tests.yml/badge.svg)](https://github.com/danieldeer/seriousdb/actions/workflows/tests.yml)
-[![Version](https://img.shields.io/badge/version-0.1.0-blue)](./VERSION)
+[![Version](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2Fdanieldeer%2Fseriousdb%2Fbadges%2Fversion.json)](https://github.com/danieldeer/seriousdb/blob/main/VERSION)
 [![Python](https://img.shields.io/badge/python-3.x-blue.svg)](https://www.python.org/)
 [![License](https://img.shields.io/github/license/danieldeer/seriousdb)](LICENSE)
 
