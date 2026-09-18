@@ -2,6 +2,15 @@
 
 # seriousdb - A seriously simple database
 
+<div align="center">
+
+[![CI](https://github.com/danieldeer/seriousdb/actions/workflows/tests.yml/badge.svg)](https://github.com/danieldeer/seriousdb/actions/workflows/tests.yml)
+[![Version](https://img.shields.io/badge/version-0.1.0-blue)](./VERSION)
+[![Python](https://img.shields.io/badge/python-3.x-blue.svg)](https://www.python.org/)
+[![License](https://img.shields.io/github/license/danieldeer/seriousdb)](LICENSE)
+
+</div>
+
 `seriousdb` is a small, simple key-value database you can query directly over HTTP. It requires zero configuration and is designed to be effortless.
 For fullstack projects, `seriousdb` can replace your complete backend.
 
